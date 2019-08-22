@@ -1,0 +1,41 @@
+<table>
+<tr>
+  <td>name</td><td><input type="text" name="ttt" id="" [(ngModel)]="names"></td>
+</tr>
+<tr><input class="btn waves-effect waves-light" type="button" name="b1" id="" value="showmsg" (click)="name()"></tr>
+<tr>
+  <td><h2 *ngIf="view">welcome {{names}}</h2></td>
+</tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td>
+      number a  </td><td><input type="text" name="" id="" [(ngModel)]="aa"></td>
+ 
+  </tr>
+  <tr>
+    <td>
+      number b </td> <td><input type="text" name="" id="" [(ngModel)]="bb">
+    </td>
+  </tr>
+  <tr>
+    <td><input class="btn waves-effect waves-light"type="button" name="ad" value="add" (click)="add()"></td>
+  </tr>
+  <tr><td><input class="btn waves-effect waves-light"type="button" name="di" id="" value="difference" (click)="diff()"></td></tr>
+</table>
+<div >{{ans}}</div>
+
+<br>
+<br><br><br>
+<table>
+  <tr>
+    <td>marks</td><td><input type="text" name="m1" id="" [(ngModel)]="mark"></td>
+  </tr>
+  <tr>
+    <td>
+      <input class="btn waves-effect waves-light" type="button" value="submit" name="b2" (click)="get()">
+    </td>
+  </tr>
+  <tr><td>{{sta}}</td></tr>
+</table>

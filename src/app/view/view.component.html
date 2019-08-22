@@ -14,7 +14,26 @@ email is :{{email}}
   hobbies
 </h2>
 <h3><table border="1px">
-  <tr *ngFor="let i of hobbies">
-    <td>{{i}}</td>
-  </tr>
+  <ul>
+    <li *ngFor="let i of hobbies;let x= index">{{i}} {{x+1}}</li>
+  </ul>
 </table></h3>
+
+  <table border="1px">
+    <tr>
+      <td>
+        project name
+      </td>
+      <td> duration</td>
+      <td>enddate</td> 
+    </tr>
+      <tr *ngFor="let p of projects;let i=index">
+<td>{{p.name}}</td>
+<td>{{p.duration}}</td>
+<td>{{p.enddate}}</td>
+    </tr>
+  </table>
+
+  <input type="button" value=" add project" name="btn1" (click)="add()">
+
+

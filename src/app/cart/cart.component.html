@@ -1,0 +1,25 @@
+<h2>shop</h2>
+<table border="1px">
+  <tr>
+    <td>name</td><td>price</td><td>company</td>
+  </tr>
+ 
+    <tr *ngFor="let p of products;let i=index">
+      <td>{{p.name}}</td><td>{{p.price}}</td><td>{{p.company}}</td><td> <input type="button" name="btn" id="" value="add to catr" (click)="add(i)"> </td>
+    </tr>
+
+</table>
+<br>
+<input type="button" name="v" value="viewcart" (click)="vie()">
+  <input type="button" name="h" value="hidecart" (click)="hid()">
+  <br>
+<table border="1px" *ngIf="view" > 
+  <tr>
+    <td>name</td><td>price</td><td>company</td>
+  </tr>
+ 
+    <tr *ngFor="let m of mycart;let x=index">
+      <td>{{m.name}}</td><td>{{m.price}}</td><td>{{m.company}}</td><td> <input type="button" name="btn" id="" value="remove item" (click)="rem(i)"> </td>
+    </tr>
+  
+</table>
