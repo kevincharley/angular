@@ -1,0 +1,20 @@
+<p>
+  view works!
+</p>
+name of employee is :{{name}}
+<hr>
+age of employee is : {{age}}
+<hr>
+email is :{{email}}
+<h2>
+  address
+</h2>
+<h3>{{address.houseno}},{{address.street}}</h3>
+<h2>
+  hobbies
+</h2>
+<h3><table border="1px">
+  <tr *ngFor="let i of hobbies">
+    <td>{{i}}</td>
+  </tr>
+</table></h3>
