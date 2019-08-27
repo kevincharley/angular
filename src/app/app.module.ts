@@ -10,6 +10,29 @@ import { SignupComponent } from './signup/signup.component';
 import { TakedataComponent } from './takedata/takedata.component';
 import {FormsModule}from '@angular/forms';
 import { HeaderComponent } from './header/header.component'
+import {RouterModule,Routes} from '@angular/router';
+import { AddComponent } from './add/add.component';
+import { DeleteComponent } from './delete/delete.component';
+import { DatasComponent } from './datas/datas.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { SeeComponent } from './see/see.component';
+import { EditComponent } from './edit/edit.component';
+import {CalcService} from './calc.service';
+import {HttpClientModule} from '@angular/common/http';
+import {MsgService} from './msg.service'
+//import {StorageServiceModule} from 'angular-webstorage-service'
+import {ProductService} from './product.service'
+
+
+const approutes:Routes=[{path:"new",component:AddComponent},
+{path:"view",component:SeeComponent},
+{path:"del",component:DeleteComponent},
+{path:"edit",component:EditComponent},
+{path:"abt",component:AboutComponent},
+{path:"service",component:DatasComponent},
+{path:"con",component:ContactComponent},
+]
 
 @NgModule({
   declarations: [
@@ -20,12 +43,20 @@ import { HeaderComponent } from './header/header.component'
     LoginpageComponent,
     SignupComponent,
     TakedataComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddComponent,
+    DeleteComponent,
+    DatasComponent,
+    AboutComponent,
+    ContactComponent,
+    SeeComponent,
+    EditComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,
+    RouterModule.forRoot(approutes),HttpClientModule
   ],
-  providers: [],
+  providers: [CalcService ,MsgService,ProductService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

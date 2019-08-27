@@ -1,0 +1,24 @@
+<p>
+  see works!
+</p>
+
+<input type="button" (click)="show()" value="view" />
+
+  <table>
+    <tr *ngFor="let i of m">
+      <td>
+        {{i.productId}}
+      </td><td>
+      <td>
+        {{i.productName}}
+      </td>
+      <td>
+        {{i.productPrice}}
+      </td>
+      <td><input type="button" (click)="gotoedit(i.productId)" value="edit"></td>
+     
+    </tr>
+  </table>
+  <div>
+    
+  </div>
