@@ -22,17 +22,22 @@ import {CalcService} from './calc.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MsgService} from './msg.service'
 //import {StorageServiceModule} from 'angular-webstorage-service'
-import {ProductService} from './product.service'
+import {ProductService} from './product.service';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component'
+const approutes:Routes=[{path:"",component:LoginComponent},{path:"home",component:HomeComponent,children:[
 
-
-const approutes:Routes=[{path:"new",component:AddComponent},
+  
+{path:"new",component:AddComponent},
 {path:"view",component:SeeComponent},
 {path:"del",component:DeleteComponent},
 {path:"edit",component:EditComponent},
-{path:"abt",component:AboutComponent},
+{path:"abt/:cname/:loc",component:AboutComponent},
 {path:"service",component:DatasComponent},
 {path:"con",component:ContactComponent},
-]
+
+]}]
+{}
 
 @NgModule({
   declarations: [
@@ -50,7 +55,9 @@ const approutes:Routes=[{path:"new",component:AddComponent},
     AboutComponent,
     ContactComponent,
     SeeComponent,
-    EditComponent
+    EditComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,FormsModule,

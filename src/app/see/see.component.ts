@@ -16,9 +16,11 @@ m
   }
   show(){
     this.vw.getview().subscribe(datas=>{
+
+      console.log("datas")
       this.m=datas;
   
-    console.log(this.m[0].productId)
+   
     }) 
 }
 

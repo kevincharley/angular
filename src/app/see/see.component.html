@@ -2,12 +2,12 @@
   see works!
 </p>
 
-<input type="button" (click)="show()" value="view" />
+<input type="button" (click)="show()" id="" value="view" />
 
   <table>
     <tr *ngFor="let i of m">
       <td>
-        {{i.productId}}
+      <a [routerLink]="['/home/abt',i.productId,i.productName]">{{i.productId}}</a>  
       </td><td>
       <td>
         {{i.productName}}
